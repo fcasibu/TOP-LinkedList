@@ -83,7 +83,7 @@ const LinkedList = () => {
       if (_head.value === value) return 0;
       if (_tail.value === value) return _size - 1;
       let current = _head;
-      let counter = 0;
+      let counter = 1;
 
       while (current) {
         if (current.value === value) return counter;
