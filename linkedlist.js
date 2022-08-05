@@ -41,8 +41,7 @@ const LinkedList = () => {
       return this.toString();
     },
     at(index) {
-      if (index < 0 || index >= _size)
-        throw new Error("Can not find any node with that index");
+      if (index < 0 || index >= _size) return null;
       if (index === 0) return _head;
       if (index === _size - 1) return _tail;
       let current = _head;
@@ -56,8 +55,7 @@ const LinkedList = () => {
       return current;
     },
     pop() {
-      if (!_tail)
-        throw new Error("Can not use pop on a linkedlist with size 0");
+      if (!_tail) return null;
 
       if (_size === 1) {
         _head = null;
