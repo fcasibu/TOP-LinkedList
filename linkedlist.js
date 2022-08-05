@@ -43,8 +43,10 @@ const LinkedList = () => {
     at(index) {
       if (index < 0 || index >= _size)
         throw new Error("Can not find any node with that index");
+      if (index === 0) return _head;
+      if (index === _size - 1) return _tail;
       let current = _head;
-      let counter = 0;
+      let counter = 1;
 
       while (counter !== index) {
         current = current.nextNode;
