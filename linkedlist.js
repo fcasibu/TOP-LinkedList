@@ -44,7 +44,7 @@ const LinkedList = () => {
       if (index < 0 || index >= _size) return null;
       if (index === 0) return _head;
       if (index === _size - 1) return _tail;
-      let current = _head;
+      let current = _head.nextNode;
       let counter = 1;
 
       while (counter !== index) {
@@ -136,8 +136,8 @@ console.log(ll.prepend(14));
 console.log(ll.append(1));
 console.log(ll.pop());
 console.log(ll.pop());
-console.log(ll.at(0));
-console.log(ll.at(4));
+console.log(ll.at(0), 'at index 0');
+console.log(ll.at(4), 'at index 4');
 console.log(ll.contains(12), "contains 12");
 console.log(ll.contains(14), "contains 14");
 console.log(ll.contains(241), "contains 241");
